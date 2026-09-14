@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>教學大富翁</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>教學大富翁</h1>
+      <p>Cloud Codex Starter MVP</p>
+    </header>
+
+    <section class="controls">
+      <label>玩家組數
+        <select id="playerCount">
+          <option value="2">2 組</option><option value="3">3 組</option>
+          <option value="4" selected>4 組</option><option value="5">5 組</option><option value="6">6 組</option>
+        </select>
+      </label>
+      <button id="startBtn">開始／重開</button>
+      <button id="rollBtn" disabled>擲骰子</button>
+    </section>
+
+    <section class="status" id="status">請先開始遊戲。</section>
+    <section class="layout">
+      <div id="board" class="board" aria-label="大富翁棋盤"></div>
+      <aside>
+        <h2>玩家</h2><div id="players"></div>
+        <div class="event-box"><h2>事件紀錄</h2><div id="log">尚未開始。</div></div>
+      </aside>
+    </section>
+  </main>
+  <script src="src/game.js"></script>
+</body>
+</html>
